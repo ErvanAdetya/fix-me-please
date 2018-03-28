@@ -13,7 +13,7 @@ module.exports = {
     var transaction = new Transaction(req.body);
     transaction.save(function (err, result) {
       if (err) {
-        res.send({err: err})
+        res.send({err: err.message})
       }
       res.send(result)
     });
